@@ -1,0 +1,32 @@
+
+super + Return
+ konsole
+ 
+super + e
+ geany
+ 
+super + b
+ blender
+
+super + a
+  rofi -show drun -config ~/.config/rofi/menu.rasi -show-icons
+
+
+super + q
+ bspc node -c
+
+
+super + {h,j,k,l}
+ bspc node -f {west,south,north,east}
+
+
+super + shift + {h,j,k,l}
+ bspc node -s {west,south,north,east}
+
+
+super + {1-5}
+ bspc desktop -f {1-5}
+
+
+super + shift + {1-5}
+ bspc node -d {1-5}
