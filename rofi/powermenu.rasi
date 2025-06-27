@@ -1,4 +1,4 @@
-@import "~/.config/rofi/colors.rasi"
+@import "~/.config/rofi/themes/colors.rasi"
 
 * {
     font: "JetbrainsMono 10";
@@ -17,8 +17,8 @@ window {
     border: 0;
     padding: 10px;
     background-color: @bg;
-    x-offset: 0;
-    y-offset: 0;
+    x-offset: 865px;
+    y-offset: -415px;
 }
 
 mainbox {
@@ -45,7 +45,7 @@ inputbar {
 
 prompt {
     enabled: false;
-    font: "Font Awesome 6 Free:style=Solid:pixelsize=18";
+    font: "Symbols Nerd Font 10";
     background-color: @gr;
     text-color: @gr2;
     border-radius: 0;
