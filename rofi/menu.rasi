@@ -6,7 +6,7 @@ configuration {
     icon-theme: "Papirus-Dark";
 }
 
-@import "~/.config/rofi/themes/colors_01.rasi"
+@import "~/.config/rofi/themes/colors_02.rasi"
 
 * {
     font: "JetBrainsMono Nerd Font 14";
@@ -30,6 +30,8 @@ window {
     border-color: @active;
     background-color: @bg;
     text-color: @fg;
+    location: south;
+    y-offset: -70px;
 }
 
 mainbox {
@@ -58,7 +60,7 @@ prompt {
 entry {
     background-color: @bg2;
     text-color: @fg;
-    placeholder-color: @underline;
+    placeholder-color: @fg;
     placeholder: "Search...";
     padding: 6;
     blink: false;
