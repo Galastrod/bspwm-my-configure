@@ -11,55 +11,43 @@
 }
 
 window {
-    padding: 10px 10px 30px 10px;
+    padding: 0;
     background-color: @bg;
     border: 0 0 4px 0;
     border-color: @active;
+    children: [listview];
 }
 
 listview {
     scrollbar: false;
-    padding: 2 0;
+    padding: 0;
     background-color: @bg;
     columns: 3;
     lines: 1;
-    margin: 0 30;
-}
-
-inputbar {
-    children: [prompt, entry];
-    background-color: @bg;
-    border-radius: 0;
     margin: 0;
 }
 
-prompt {
-    enabled: false;
-    background-color: @bg;
-    text-color: @fg;
-    border-radius: 0;
+inputbar {
+    visible: false;
+    height: 0;
     padding: 0;
+    margin: 0;
 }
-
 
 entry {
-    background-color: transparent;
-    text-color: transparent;
-    border-radius: 0;
-    blink: false;
+    visible: false;
+    height: 0;
     padding: 0;
+    margin: 0;
 }
-
-
 
 element {
     background-color: transparent;
     padding: 20px;
-    border-radius: 6px;
 }
 
 element-text {
-	font: "Font Awesome 6 Free 20";
+    font: "Font Awesome 6 Free 20";
     background-color: transparent;
     text-color: @fg;
     padding: 0;
@@ -72,10 +60,12 @@ element.normal.normal {
     background-color: @bg;
     text-color: @fg;
 }
+
 element.normal.active {
     background-color: @active;
     text-color: @bg;
 }
+
 element.selected.normal {
     background-color: @active;
     text-color: @bg;
