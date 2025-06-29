@@ -1,9 +1,9 @@
-@import "~/.config/rofi/themes/colors.rasi"
+@import "~/.config/rofi/themes/colors_01.rasi"
 
 * {
     font: "JetbrainsMono 10";
-    background-color: @gr;
-    separatorcolor: transparent;
+    background-color: @bg;
+    text-color: @fg;
     border: 0;
     margin: 0;
     padding: 0;
@@ -11,108 +11,72 @@
 }
 
 window {
-    width: 170px;
-    height: 150px;
-    border-radius: 0;
-    border: 0;
-    padding: 10px;
+    padding: 10px 10px 30px 10px;
     background-color: @bg;
-    x-offset: 865px;
-    y-offset: -415px;
-}
-
-mainbox {
-    background-color: @bg;
-    children: [listview];
-    padding: 0;
+    border: 0 0 4px 0;
+    border-color: @active;
 }
 
 listview {
     scrollbar: false;
     padding: 2 0;
     background-color: @bg;
-    columns: 1;
-    lines: 7;
-    margin: 8 0 0 0;
+    columns: 3;
+    lines: 1;
+    margin: 0 30;
 }
 
 inputbar {
     children: [prompt, entry];
-    background-color: @gr;
+    background-color: @bg;
     border-radius: 0;
     margin: 0;
 }
 
 prompt {
     enabled: false;
-    font: "Symbols Nerd Font 10";
-    background-color: @gr;
-    text-color: @gr2;
+    background-color: @bg;
+    text-color: @fg;
     border-radius: 0;
     padding: 0;
 }
 
+
 entry {
     background-color: transparent;
-    text-color: @fg;
+    text-color: transparent;
     border-radius: 0;
     blink: false;
-    padding: 4px;
+    padding: 0;
 }
 
+
+
 element {
-    background-color: rgba(0,0,0,0);
-    padding: 10px;
-    border-radius: 10px;
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 6px;
 }
 
 element-text {
-    background-color: inherit;
-    text-color: inherit;
-    expand: true;
-    horizontal-align: 0;
+	font: "Font Awesome 6 Free 20";
+    background-color: transparent;
+    text-color: @fg;
+    padding: 0;
+    horizontal-align: 0.5;
     vertical-align: 0.5;
-}
-
-element-icon {
-    background-color: inherit;
-    text-color: inherit;
-    padding: 0 10px 0 0;
+    expand: true;
 }
 
 element.normal.normal {
     background-color: @bg;
     text-color: @fg;
 }
-element.normal.urgent {
-    background-color: @gr;
-    text-color: @fg;
-}
 element.normal.active {
-    background-color: @gr;
-    text-color: @fg;
+    background-color: @active;
+    text-color: @bg;
 }
 element.selected.normal {
-    background-color: @gr;
-    text-color: @fg;
-}
-element.selected.urgent {
-    background-color: @gr;
-    text-color: @fg;
-}
-element.selected.active {
-    background-color: @gr;
-    text-color: @fg;
-}
-element.alternate.normal {
-    background-color: @bg;
-    text-color: @fg;
-}
-element.alternate.urgent {
-    background-color: @bg;
-    text-color: @fg;
-}
-element.alternate.active {
-    background-color: @bg;
-    text-color: @fg;
+    background-color: @active;
+    text-color: @bg;
 }

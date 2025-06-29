@@ -9,12 +9,11 @@ export XCURSOR_SIZE=24
 
 pulseaudio --start &
 sxhkd &
-picom --config ~/.config/picom/config.conf &
-konsole &
-feh --bg-scale ~/bg/bg_01.jpg &
+picom --config ~/.config/picom/picom.conf &
+kitty &
+feh --no-fehbg --bg-fill "$(find ~/bg -type f | shuf -n 1)" &
 ~/.config/polybar/launch.sh &
-bspc monitor HDMI-A-0 -d 1 2 3 &
-bspc monitor DVI-D-0 -d 1 2 3 &
+bspc monitor -d 1 2 3 4 5 &
 
 bspc config border_width         1
 bspc config window_gap          10

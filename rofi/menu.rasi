@@ -6,10 +6,10 @@ configuration {
     icon-theme: "Papirus-Dark";
 }
 
-@import "~/.config/rofi/themes/colors.rasi"
+@import "~/.config/rofi/themes/colors_01.rasi"
 
 * {
-    font: "JetBrainsMono Nerd Font 10";
+    font: "JetBrainsMono Nerd Font 14";
 
     background-color: @bg;
     text-color: @fg;
@@ -25,8 +25,11 @@ window {
     width: 700px;
     height: 350px;
     padding: 10;
-    border-radius: 4;
     background-color: @bg;
+    border: 0 0 4px 0;
+    border-color: @active;
+    background-color: @bg;
+    text-color: @fg;
 }
 
 mainbox {
@@ -37,27 +40,30 @@ mainbox {
 
 inputbar {
     children: [prompt, entry];
-    background-color: @bg-alt;
+    background-color: @bg2;
     text-color: @fg;
     border-radius: 6;
-    margin: 10 0;
-    padding: 5;
+    padding: 8 10;
 }
 
 prompt {
-    font: "Font Awesome 6 Free";
-    background-color: transparent;
-    text-color: @accent;
+    font: "Font Awesome 6 Free 14";
+    background-color: @bg2;
+    text-color: @active;
     padding: 0 10 0 10;
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
 }
 
 entry {
-    background-color: transparent;
+    background-color: @bg2;
     text-color: @fg;
     placeholder-color: @underline;
     placeholder: "Search...";
     padding: 6;
     blink: false;
+    horizontal-align: 0;
+    vertical-align: 0.5;
 }
 
 listview {
@@ -95,14 +101,14 @@ element.normal.normal {
 }
 element.normal.urgent,
 element.normal.active {
-    background-color: @bg-alt;
+    background-color: @bg2;
     text-color: @fg;
 }
 
 element.selected.normal,
 element.selected.urgent,
 element.selected.active {
-    background-color: @accent;
+    background-color: @active;
     text-color: @bg;
 }
 
