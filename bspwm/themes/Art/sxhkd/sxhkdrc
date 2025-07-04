@@ -1,20 +1,17 @@
 super + a
-	rofi -show drun -config ~/.config/rofi/menu.rasi -show-icons
+	rofi -show drun -config ~/.config/bspwm/themes/Art/rofi/menu.rasi -show-icons
 
 super + Return
-  konsole
+  kitty
   
-@Print
-	scrot
-
-shift + @Print
-	scrot -d 5
-
+super + p 
+	pcmanfm
+	
 super + f
-  pcmanfm
-
-super + b
-	blender
+	falkon
+	
+super + g 
+	geany
 
 #Reboot sxhkd
 super + e

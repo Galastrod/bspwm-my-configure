@@ -1,3 +1,0 @@
-#! /bin/bash
-
-rofi -show drun -config ~/.config/rofi/menu.rasi -show-icons

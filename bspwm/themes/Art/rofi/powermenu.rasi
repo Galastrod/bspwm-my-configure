@@ -1,4 +1,4 @@
-@import "~/.config/rofi/themes/colors_02.rasi"
+@import "~/.config/bspwm/themes/Art/rofi/colors.rasi"
 
 * {
     font: "JetbrainsMono 10";
@@ -11,12 +11,14 @@
 }
 
 window {
+	location: southeast;
+	anchor: southeast;
     padding: 0;
     background-color: @bg;
     border: 0 0 4px 0;
     border-color: @active;
     children: [listview];
-    location: south;
+    x-offset: -1%;
     y-offset: -70px;
 }
 
@@ -60,15 +62,23 @@ element-text {
 
 element.normal.normal {
     background-color: @bg;
-    text-color: @fg;
 }
 
 element.normal.active {
     background-color: @active;
-    text-color: @bg;
+    text-color: @active-fg;
 }
 
 element.selected.normal {
     background-color: @active;
-    text-color: @bg;
+    text-color: @active-fg;
 }
+
+element-text.normal {
+    text-color: @fg;
+}
+
+element-text.selected.normal {
+    text-color: @active-fg;
+}
+

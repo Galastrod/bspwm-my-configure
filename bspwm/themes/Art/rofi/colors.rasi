@@ -1,0 +1,7 @@
+* {
+    bg: #f7f7f7;
+    bg2: #d1d5db;
+    fg: #777777;
+    active: #FF5D73;
+    active-fg: #f7f7f7;
+}
